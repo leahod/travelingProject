@@ -1,2 +1,2 @@
-# travelingGroupProject
+# TravelingGroupProject
 
