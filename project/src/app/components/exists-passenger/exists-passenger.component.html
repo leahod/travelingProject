@@ -1,0 +1,21 @@
+<div class="section">
+  <div class="container">
+    <div class="info">
+      <h1> שלום ל{{user.Name}}</h1>
+    </div>
+  </div>
+  <div class="form">
+    <div class="thumbnail"><img src="../../../assets/images/car.png" /></div>
+    <form class="login-form">
+      <ul>
+        <li><button class="text" (click)="edit()">עדכון פרטים אישיים</button></li>
+        <li><button class="text" (click)="addTravel()">הוספת נסיעה</button></li>
+        <!-- <li><button class="text"  >עדכון נסיעה</button></li>
+          <li><button class="text"  >מחיקת נסיעה</button></li>-->
+        <li><button class="text" (click)="getTravelings()">צפיה בנסיעות</button></li>
+        <li><button class="text" (click)="getPayments()">צפיה בתשלומים</button></li>
+        <!-- <li><button class="text"  >סטטיסטיקה</button></li> -->
+      </ul>
+    </form>
+  </div>
+</div>

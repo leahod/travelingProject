@@ -1,0 +1,50 @@
+div{
+    position: fixed; 
+    height: 8%;
+    border-radius: 30px;
+    background-color: #13303a;
+    position: fixed;
+    right:-3%;
+     //margin-top: 50%;
+    width: 30%;
+    text-align: center;
+    cursor: pointer;
+    p{
+        color: rgb(235, 219, 213);
+        float: right;
+        padding-right:15%;
+        padding-top: 8%;
+    }
+
+    .material-icons{
+        padding: 7px;
+        padding-right: -2%;
+        padding-top: 8%;
+        color: rgba(237, 239, 248, 0.76);
+    }
+    // @media   (max-width:425px) {
+    //   margin-top: 90%;  
+    // }
+    // @media (min-width: 425px) {
+    //     margin-top: 50%;
+    //   }   
+}
+
+@media   (max-width:425px) {
+    div{
+        margin-top: 90%;  
+    }  
+}
+@media   (min-width:425px) {
+    div{
+        margin-top: 50%;  
+    }  
+}
+
+.first{
+    visibility: visible;
+}
+
+.second{
+    visibility: hidden;
+}

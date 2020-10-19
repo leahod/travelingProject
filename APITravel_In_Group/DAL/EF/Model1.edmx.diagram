@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e99ed5bcd41d45e8ad3150c1d45a762c" Name="Diagram1" ZoomLevel="94">
+        <EntityTypeShape EntityType="Travel_In_GroupDBModel.Driver" Width="1.5" PointX="3" PointY="7.25" />
+        <EntityTypeShape EntityType="Travel_In_GroupDBModel.Payment" Width="1.5" PointX="11.125" PointY="13.125" />
+        <EntityTypeShape EntityType="Travel_In_GroupDBModel.Passenger" Width="1.5" PointX="3.125" PointY="2.625" />
+        <EntityTypeShape EntityType="Travel_In_GroupDBModel.PaymentKind" Width="1.5" PointX="10.625" PointY="5.125" />
+        <EntityTypeShape EntityType="Travel_In_GroupDBModel.TravelDriverRange" Width="1.5" PointX="7.625" PointY="13.75" />
+        <EntityTypeShape EntityType="Travel_In_GroupDBModel.TravelingPassenger" Width="1.5" PointX="5.375" PointY="1.875" />
+        <EntityTypeShape EntityType="Travel_In_GroupDBModel.User" Width="1.5" PointX="0.875" PointY="7.375" />
+        <AssociationConnector Association="Travel_In_GroupDBModel.FK__Driver__Identity__0697FACD" />
+        <AssociationConnector Association="Travel_In_GroupDBModel.FK__Passenger__Ident__6FE99F9F" />
+        <AssociationConnector Association="Travel_In_GroupDBModel.FK__Traveling__Passe__5B438874" />
+        <AssociationConnector Association="Travel_In_GroupDBModel.FK__Payment__IdPayme__6D6238AF" />
+        <EntityTypeShape EntityType="Travel_In_GroupDBModel.TravelPassengerRange" Width="1.5" PointX="7.625" PointY="3" />
+        <EntityTypeShape EntityType="Travel_In_GroupDBModel.TravelReporting" Width="1.5" PointX="7.5" PointY="10" />
+        <AssociationConnector Association="Travel_In_GroupDBModel.FK__TravelPassen__Id__09FE775D" />
+        <EntityTypeShape EntityType="Travel_In_GroupDBModel.TravelingDriver" Width="1.5" PointX="5.25" PointY="7.625" />
+        <AssociationConnector Association="Travel_In_GroupDBModel.FK__Traveling__Drive__15702A09" />
+        <AssociationConnector Association="Travel_In_GroupDBModel.FK__TravelDriver__Id__147C05D0" />
+        <AssociationConnector Association="Travel_In_GroupDBModel.FK__TravelRep__IdTra__39AD8A7F" />
+        <EntityTypeShape EntityType="Travel_In_GroupDBModel.Registeration" Width="1.5" PointX="7.625" PointY="5.5" />
+        <EntityTypeShape EntityType="Travel_In_GroupDBModel.RegistrationDateRange" Width="1.5" PointX="9.875" PointY="7.625" />
+        <AssociationConnector Association="Travel_In_GroupDBModel.FK__Payment__IdRegis__6E565CE8" />
+        <AssociationConnector Association="Travel_In_GroupDBModel.FK__Registera__Trave__1387E197" />
+        <AssociationConnector Association="Travel_In_GroupDBModel.FK__Registera__Trave__5A4F643B" />
+        <AssociationConnector Association="Travel_In_GroupDBModel.FK__Registration__Id__473C8FC7" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,6 @@
+<div *ngIf="changeUser.changeUserLogin"
+    [ngClass]="{'first': changeUser.hiddenchangeUserLogin==true, 'second':changeUser.hiddenchangeUserLogin==false }"
+    (click)="changeUserLogin()">
+    <span class="material-icons"> person</span>
+    <p>{{changeUser.textUser}}</p>
+</div>

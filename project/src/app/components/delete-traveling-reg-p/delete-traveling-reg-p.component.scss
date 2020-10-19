@@ -1,0 +1,32 @@
+mat-form-field{
+    text-align: right;
+  }
+#condition{
+    font-size: 77%;
+    text-align: center;
+    color:rgb(0,39,58); 
+}
+a{
+    margin-left: 96%;
+}
+h1{
+    color:#bb3209;
+    text-align: center;
+}
+ 
+
+ .btnOk{
+            background: rgb(0,39,58);
+            width: 80%;
+            border: 0;
+            border-color:  #bb3209; ;
+            border-radius: 3px;
+            color: #F1C495;
+            font-size: 14px;
+            cursor: pointer;
+            margin-left: 5%;
+   }
+   .mat-dialog-content
+   {
+    overflow: hidden;
+   }

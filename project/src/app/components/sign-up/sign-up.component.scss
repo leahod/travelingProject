@@ -1,0 +1,305 @@
+ 
+.hm-gradient {
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+.darken-grey-text {
+    color: #2E2E2E;
+}
+.danger-text {
+    color: #ff3547; }
+.default-text {
+    color: #2BBBAD; 
+}
+.info-text {
+    color: #33b5e5; 
+}
+.form-white .md-form label {
+  color: #fff; 
+}
+.form-white input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #fff;
+    -webkit-box-shadow: 0 1px 0 0 #fff;
+    box-shadow: 0 1px 0 0 #fff; 
+}
+.form-white input[type=text]:focus:not([readonly]) + label {
+    color: #fff; 
+}
+.form-white input[type=password]:focus:not([readonly]) {
+    border-bottom: 1px solid #fff;
+    -webkit-box-shadow: 0 1px 0 0 #fff;
+    box-shadow: 0 1px 0 0 #fff; 
+}
+.form-white input[type=password]:focus:not([readonly]) + label {
+    color: #fff; 
+}
+.form-white input[type=password], .form-white input[type=text] {
+    border-bottom: 1px solid #fff; 
+}
+.form-white .form-control:focus {
+    color: #fff;
+}
+.form-white .form-control {
+    color: #fff;
+}
+.form-white textarea.md-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 0 #fff;
+    color: #fff; 
+}
+.form-white textarea.md-textarea  {
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+.form-white textarea.md-textarea:focus:not([readonly])+label {
+    color: #fff;
+}
+.ripe-malinka-gradient {
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+}
+.near-moon-gradient {
+    background-image: linear-gradient(to bottom, #5ee7df 0%, #b490ca 100%);
+}
+////////////////////////////gender
+.ui-checkbox{
+    display: inline-block;
+    position: relative;
+    // border: 1px solid gray;
+    // border-radius: 5px;
+    perspective: 100px;
+    transform-style: preserve-3d;
+    vertical-align: middle;
+}
+
+.ui-checkbox input{
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    position: relative;
+    z-index: 100;
+    width: 20px;
+    height: 20px;
+}
+
+.ui-checkbox [data-checked]:before, .ui-checkbox .ui-checked{
+    content: attr(data-checked);
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
+.ui-checkbox [data-unchecked]:after, .ui-checkbox .ui-unchecked{
+    content: attr(data-unchecked);
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
+.ui-checkbox input:checked + [data-checked]:before, .ui-checkbox input:checked + .ui-custom .ui-checked{
+    visibility: visible;
+}
+
+.ui-checkbox input:not(:checked) + [data-unchecked]:after, .ui-checkbox input:not(:checked) + .ui-custom .ui-unchecked{
+    visibility: visible;
+}
+
+/* Size */
+
+.ui-small{
+    width: 20px;
+    height: 20px;
+}
+
+.ui-small [data-checked]:before, .ui-small [data-unchecked]:after, .ui-small .ui-custom{
+    font-size: 16px;
+}
+
+.ui-small input{
+    width: 20px;
+    height: 20px;
+}
+
+.ui-medium{
+    width: 30px;
+    height: 30px;
+}
+
+.ui-medium [data-checked]:before, .ui-medium [data-unchecked]:after, .ui-medium .ui-custom{
+    font-size: 18px;
+}
+
+.ui-medium input{
+    width: 30px;
+    height: 30px;
+}
+
+.ui-large{
+    width: 50px;
+    height: 50px;
+}
+
+.ui-large [data-checked]:before, .ui-large [data-unchecked]:after, .ui-large .ui-custom{
+    font-size: 30px;
+}
+
+.ui-large input{
+    width: 50px;
+    height: 50px;
+}
+
+.ui-checkbox.noround{
+    border-radius: none !important;
+    border: none !important;
+}
+
+.ui-checkbox.round{
+    border-radius: 50%;
+}
+
+/* Color */
+
+.ui-checkbox.bg-tomato, .ui-checkbox.bg-gray, .ui-checkbox.bg-tomato, .ui-checkbox.bg-dodgerblue, .ui-checkbox.bg-gold, .ui-checkbox.bg-limegreen, .ui-checkbox.bg-crimson, .ui-checkbox.bg-cadetblue, .ui-checkbox.bg-indigo, .ui-checkbox.bg-magenta, .ui-checkbox.bg-darkkhaki, .ui-checkbox.bg-sandybrown, .ui-checkbox.bg-hotpink{
+    border-width: 2px;
+    border-style: solid;
+}
+
+ 
+/* color set */
+.ui-checkbox.bg-gray{
+    // border-color: #CCC;
+    background-color: transparent;
+     color: #CCC;
+}
+ 
+
+
+ 
+/* Fadein Animation */
+.ui-checkbox.ui-animation-fadein [data-checked]:before, .ui-checkbox.ui-animation-fadein .ui-checked{
+    opacity: 0;
+    transition: all 1s cubic-bezier(0,.98,.21,.96);
+}
+
+.ui-checkbox.ui-animation-fadein [data-unchecked]:after, .ui-checkbox.ui-animation-fadein .ui-unchecked{
+    opacity: 0;
+    transition: all 1s cubic-bezier(0,.98,.21,.96);
+}
+
+.ui-checkbox.ui-animation-fadein input:checked + [data-checked]:before, .ui-checkbox.ui-animation-fadein input:checked + .ui-custom .ui-checked{
+    visibility: visible;
+    opacity: 1;
+}
+
+.ui-checkbox.ui-animation-fadein input:not(:checked) + [data-unchecked]:after, .ui-checkbox.ui-animation-fadein input:not(:checked) + .ui-custom .ui-unchecked{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* zoom Animation */
+.ui-checkbox.ui-animation-zoom [data-checked]:before, .ui-checkbox.ui-animation-zoom .ui-checked{
+    transition: transform 1s cubic-bezier(0,.98,.21,.96);
+    transform: translateX(-50%) translateY(-50%) translateZ(-100px);
+}
+
+.ui-checkbox.ui-animation-zoom [data-unchecked]:after, .ui-checkbox.ui-animation-zoom .ui-unchecked{
+    transition: transform 1s cubic-bezier(0,.98,.21,.96);
+    transform: translateX(-50%) translateY(-50%) translateZ(-100px);
+}
+
+.ui-checkbox.ui-animation-zoom input:checked + [data-checked]:before, .ui-checkbox.ui-animation-zoom input:checked + .ui-custom .ui-checked{
+    visibility: visible;
+    transform: translateX(-50%) translateY(-50%) translateZ(0px);
+}
+
+.ui-checkbox.ui-animation-zoom input:not(:checked) + [data-unchecked]:after, .ui-checkbox.ui-animation-zoom input:not(:checked) + .ui-custom .ui-unchecked{
+    visibility: visible;
+    transform: translateX(-50%) translateY(-50%) translateZ(0px);
+}
+
+/* flip Animation */
+.ui-checkbox.ui-animation-flip [data-checked]:before, .ui-checkbox.ui-animation-flip .ui-checked{
+    transition: transform 1s cubic-bezier(0,.98,.21,.96);
+    transform: translateX(-50%) translateY(-50%) rotateX(90deg);
+}
+
+.ui-checkbox.ui-animation-flip [data-unchecked]:after, .ui-checkbox.ui-animation-flip .ui-unchecked{
+    transition: transform 1s cubic-bezier(0,.98,.21,.96);
+    transform: translateX(-50%) translateY(-50%) rotateX(90deg);
+}
+
+.ui-checkbox.ui-animation-flip input:checked + [data-checked]:before, .ui-checkbox.ui-animation-flip input:checked + .ui-custom .ui-checked{
+    visibility: visible;
+    transform: translateX(-50%) translateY(-50%) rotateX(0deg);
+}
+
+.ui-checkbox.ui-animation-flip input:not(:checked) + [data-unchecked]:after, .ui-checkbox.ui-animation-flip input:not(:checked) + .ui-custom .ui-unchecked{
+    visibility: visible;
+    transform: translateX(-50%) translateY(-50%) rotateX(0deg);
+}
+
+/* rotate Animation */
+.ui-checkbox.ui-animation-rotate [data-checked]:before, .ui-checkbox.ui-animation-rotate .ui-checked{
+    transition: transform 1s cubic-bezier(0,.98,.21,.96);
+    transform: translateX(-50%) translateY(-50%) rotateY(360deg);
+}
+
+.ui-checkbox.ui-animation-rotate [data-unchecked]:after, .ui-checkbox.ui-animation-rotate .ui-unchecked{
+    transition: transform 1s cubic-bezier(0,.98,.21,.96);
+    transform: translateX(-50%) translateY(-50%) rotateY(360deg);
+}
+
+.ui-checkbox.ui-animation-rotate input:checked + [data-checked]:before, .ui-checkbox.ui-animation-rotate input:checked + .ui-custom .ui-checked{
+    visibility: visible;
+    transform: translateX(-50%) translateY(-50%) rotateY(0deg);
+}
+
+.ui-checkbox.ui-animation-rotate input:not(:checked) + [data-unchecked]:after, .ui-checkbox.ui-animation-rotate input:not(:checked) + .ui-custom .ui-unchecked{
+    visibility: visible;
+    transform: translateX(-50%) translateY(-50%) rotateY(0deg);
+}
+
+/* Remove this css it's for demo ui */
+.element{
+    box-shadow: 0 0 5px 0 rgba(120, 214, 117, 0.1);
+    padding: 10px;
+    // border: 1px solid #DDD;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+
+.element .el-child + .el-child{
+    margin-top: 10px;
+}
+
+.element h2{
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 10px;
+}
+
+label{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.el-child-inline{
+    display: inline-block;
+    margin: 5px;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 30px;
+    width: 90%;
+    margin: auto;
+}

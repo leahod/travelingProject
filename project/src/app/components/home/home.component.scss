@@ -1,0 +1,256 @@
+// @import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+
+//Vars
+$border-color: #000a57;
+$green: #63cd33;
+
+//Animations
+@keyframes loading{
+  to{
+    max-width: 100%;
+  }
+}
+@keyframes animLogin{
+  20%{
+   transform: translateY(60px); 
+  }
+  100%{
+    transform: translateY(-1000px);
+  }
+}
+@keyframes animRoot{
+  100%{
+   background-position: center -10px;
+  }
+}
+@keyframes animRoot2{
+  from{
+    height: 0px;
+  }
+  to{
+    transform: translateY(100px);
+    height: 1200px;
+  }
+}
+@keyframes animClaim{
+  from{
+   opacity: 0;
+  }
+  100%{
+    margin-top: 10%;
+    opacity: 1;
+  }
+}
+
+:root{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 100%;
+  background: url('http://farm8.staticflickr.com/7342/9372014358_5bc95f5c4c_b.jpg') no-repeat center center fixed;
+ background-size: cover;
+}
+::-webkit-input-placeholder {
+  font-size: .7rem;
+  color: white;
+  text-shadow: -1px 1px 1px $border-color,
+               -2px 1px 1px $border-color;
+}
+:-moz-placeholder { 
+  font-size: .7rem;
+  color: white;
+  text-shadow: -1px 1px 1px $border-color,
+               -2px 1px 1px $border-color; 
+}
+
+::-moz-placeholder { 
+  font-size: .7rem;
+  color: white;
+  text-shadow: -1px 1px 1px $border-color,
+               -2px 1px 1px $border-color;
+}
+:-ms-input-placeholder {  
+  font-size: .7rem;
+  color: white;
+  text-shadow: -1px 1px 1px $border-color,
+               -2px 1px 1px $border-color; 
+}
+
+//Anim of root
+html{
+  transition : transform 1s linear;
+  overflow: hidden;
+  &.anim {
+    animation: animRoot .2s 2s ease-in forwards;
+    .login{
+      animation: animLogin 1s 2s forwards;
+    }
+    &:after{
+      display: inline-block;
+      animation: animRoot2 1s 1.5s linear forwards;
+    }
+    &:before{
+      animation: animClaim 2s 2s forwards;
+    }
+    .content-after-anim{
+      animation: animClaim .8s 4s forwards;
+    }
+  }
+  &:after{
+    display: block;
+    content: '';
+    width: 100%;
+    background: url('https://farm4.staticflickr.com/3854/15275282172_edc94e59c6_b.jpg') no-repeat center center fixed;
+    background-size: cover;
+    -webkit-filter: brightness(0.55);
+    transform: translateY(1000px);
+  }
+  &:before{
+    opacity: 0;
+    display: block;
+    content: 'Hi';
+    color: white;
+    font-size: 8em;
+    text-indent: -130px;
+    width: 100px;
+    height: 100px;
+    background: white;
+    margin: 0 auto;
+  }
+}
+
+.login{
+  position: absolute; 
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 300px;
+  height: 220px;
+  padding: 15px;
+  margin: auto; 
+  background: rgba(0,0,0,.5); 
+}
+
+.login-heading{
+  font-size: 1.9rem;
+  font-weight: 100;
+  line-height: 3rem;
+  color: white;
+  text-shadow: -1px 1px 1px $border-color,
+               -2px 1px 1px $border-color;
+  [data-line]{   
+    display: inline-block;
+    position: absolute;
+    left: 0; bottom: 30px; right: 0;
+    margin: auto;    
+    width: 85px;
+    color: grey;
+    &:before{
+      display: none;   
+      content: attr(data-line);
+      position: absolute;
+      top: 0px;
+      z-index: 10;
+      max-width: 0;
+      overflow: hidden;
+      color: lighten($green, 25%);      
+      animation: loading .8s .4s forwards infinite;
+   }
+  }
+}
+
+.input-txt{
+  box-sizing: border-box;
+  padding: .8rem .9rem;
+  width: 300px;
+  margin-bottom: 1rem;
+  border: 1px solid #797e73;
+  box-shadow: inset 0px 1px 1px $border-color,
+              inset 1px 0px 1px $border-color,
+              inset -1px 0px 1px $border-color,
+              inset 0px -1px 1px $border-color,
+                   0px 1px 1px darken($border-color,10%),
+                   1px 0px 1px darken($border-color,30%),
+                   -1px 0px 1px darken($border-color,30%),
+                   0px -1px 1px darken($border-color,35%);
+  background: rgba(20,30,100,.2);
+  color: white;  
+}
+
+:target [data-line]{
+  &:before{
+    display: inline-block;
+  }
+}
+:target .btn{
+  opacity: .85;
+  cursor: wait;
+}
+:target .btn span{
+  transform: translate3d( 0px, 30px, -280px ) rotateX( 90deg )
+}
+
+
+.btn{
+  display: inline-block;
+  width: 300px;
+  height: 45px;
+  vertical-align: top;
+  perspective: 400px;
+  perspective-origin: 50% 50%;
+  span{
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: .8rem .9rem;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px 1px 1px #a8f744,
+                inset 1px 0px 1px #65d837,
+                inset -1px 0px 1px #65d837,
+                inset 0px -1px 1px #00b015,
+                      0px 1px 1px darken($border-color,15%),
+                      1px 0px 1px darken($border-color,5%),
+                      -1px 0px 1px darken($border-color,5%),
+                      0px -1px 1px darken($border-color,5%);
+    background-image: linear-gradient( lighten($green,10%)  0%, lighten($green,5%) 50%, $green 51%, darken($green,10%) 100% );
+    border: none;
+    font-size: 1.2rem;
+    text-shadow: -1px 1px 1px $border-color;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transform-origin: 50% 0;
+    transform-style: preserve-3d;
+    transition: all .4s ease-in-out;
+    &:before{
+       content: attr(data-proccess);
+       position: absolute;
+       left: 0;top: 0;
+       box-sizing: border-box;
+       display: inline-block;
+       padding: inherit;
+       width: inherit;
+       height: inherit;
+       background: darken($green, 20%);
+       border: inherit;
+       box-shadow: inherit;
+       color: rgba(255, 255, 255, .8);
+       font-size: 1.1em;
+       text-shadow: none;
+       transform-origin: 50% 0%;
+       transform: translate3d( 0px, 100%, 0px ) rotateX( -90deg );
+       transition: all .4s ease-in-out;
+    }
+  }
+
+}
+
+.content-after-anim{
+  position: absolute;
+  right: 1rem;
+  top: 0%;
+  opacity: 0;
+  > a{ color: white }
+}
+
+
+

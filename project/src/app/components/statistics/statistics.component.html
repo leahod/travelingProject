@@ -1,0 +1,53 @@
+<!-- <div class="section">
+
+</div> -->
+<h2>סטטיסטיקות</h2>
+
+<ul class="toolbar cf">
+  <li><a (click)="showStatistics(1)"> <i class="material-icons"> person</i></a></li>
+  <li><a (click)="showStatistics(2)"> <i class="material-icons">date_range </i></a></li>
+  <li><a (click)="showStatistics(3)"><i class="material-icons"> ₪</i></a></li>
+  <li><a (click)="showStatistics(4)"><i class="material-icons"> airport_shuttle</i></a></li>
+</ul>
+
+<div class="statistic" *ngIf="statistics==1">
+  <P>ניתוח נסיעות בין גברים לנשים</P>
+  <div>
+    <div>
+      <div class="chart">
+        <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
+          [options]="pieChartOptions" [plugins]="pieChartPlugins" [colors]="pieChartColors" [legend]="pieChartLegend">
+        </canvas>
+      </div>
+    </div>
+  </div>
+  <div>
+    <button mat-button mat-raised-button color="primary" (click)="pieChartLegend=!pieChartLegend">הגדלה</button>
+  </div>
+</div>
+
+
+<div class="statistic" *ngIf="statistics==2">
+  <P>ניתוח היום המבוקש ביותר</P>
+  <div>
+    <div style="display: block">
+      <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+        [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
+      </canvas>
+    </div>
+    <button mat-button mat-raised-button color="primary" (click)="randomize()">Update</button>
+  </div>
+</div>
+
+<div class="statistic" *ngIf="statistics==3">
+  <p>מספר מצטרפים בממוצע לרכב</p>
+  <div style="display: block">
+    <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels"
+      [chartType]="doughnutChartType"></canvas>
+  </div>
+</div>
+
+<div class="statistic" *ngIf="statistics==4">
+  <P>מספר מצטרפים בממוצע לרכב</P>
+  <div class="numPassengers">{{avgPassengers}}</div>
+</div>
